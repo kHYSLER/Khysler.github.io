@@ -556,7 +556,6 @@ h1, h2, h3,
         height: auto;
     }
 }
-/* TARGET MOBILE SCREENS ONLY */
 @media screen and (max-width: 768px) {
     html, body {
         width: 100% !important;
@@ -569,10 +568,17 @@ h1, h2, h3,
         max-width: 100% !important;
         margin: 0 auto !important;
         box-sizing: border-box !important;
+        text-align: center !important; /* DITO ILAGAY PARA MAGING NAKAGITNA ANG TEXT */
+    }
+
+    h1, h2, h3, p, span, button {
+        text-align: center !important; /* SISIGURADUHING NAKAGITNA ANG LAHAT NG TEXT AT BUTTONS */
     }
 
     img {
         max-width: 100% !important;
         height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
 }
