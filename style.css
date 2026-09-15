@@ -525,3 +525,21 @@ h1, h2, h3,
   display: block !important;
   margin: 10px auto !important;        /* Nakagitna sa page */
 }
+/* Ilagay sa dulo ng style.css */
+.container {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+/* Gagana lang ang code sa loob nito kapag 768px o mas maliit ang screen (tulad ng cellphone) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Mas maliit na text */
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%; /* Para hindi sumobra ang lapad ng picture sa screen */
+        height: auto;
+    }
+}
