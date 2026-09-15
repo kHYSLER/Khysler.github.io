@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Sacramento&display=swap');
+/* GENERAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', cursive, sans-serif;
+}
+
+body {
+  /* BACKGROUND: Pwede mong palitan ang kulay o maglagay ng background-image */
+  background: #a24268; 
+  background-image: url('icon/background-tulips.jpg'); /* PALITAN MO ITO kung may background image ka */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* PAGES CONTROL */
+.page {
+  display: none;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.page.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CONTAINER / CARD LAYOUT */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  background: #ffffff;
+  color: #a24268;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* PAGE 2: GIFT BOX */
+/* Styling para sa Page 2 Gift Box */
+.gift-box {
+  cursor: pointer;
+  margin-top: 20px;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.gift-box img {
+  width: 380px;
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+  display: block;
+}
+
+.gift-box:hover {
+  transform: scale(1.1);
+}
+
+/* Lumulutang na Animation (Floating Effect) */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* PAGE 3: MENU GRID */
+.menu-grid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 150px !important;              /* Sobrang layo na ng distansya sa pagitan ng 3 icons */
+  margin-top: 140px !important;
+  width: 100% !important;
+}
+
+/* Styling para sa Landing Page (Page 1) */
+#page-1 {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+/* Change Line 119 in style.css */
+.main-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5.5rem; /* LINALAKAN MULA 3.8rem TO 5.5rem */
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.1rem;
+  white-space: nowrap;
+  margin-top: -60px; /* INANGAT PATAAS */
+}
+
+/* Subtitle text */
+.subtitle-text {
+  font-family: 'Poppins', serif;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0;
+}
+
+/* Continue button sa pinakababa (katulad ng sa video/picture) */
+.btn-continue {
+  position: absolute;
+  bottom: 80px; /* INANGAT PATAAS MULA 40px TO 80px */
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: 'Poppins', serif;
+  font-size: 1.3rem; /* LINALAKAN DIN NANG KONTI */
+  cursor: pointer;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0.95;
+}
+
+.btn-continue:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.photo-card {
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* PAGE 6: LETTER */
+.letter-card {
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.letter-card h1 {
+  text-align: center;
+}
+
+.spotify-container {
+  margin: 15px 0;
+}
+
+.letter-body p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.signature {
+  margin-top: 20px;
+  text-align: right;
+}
+.signature {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* I-a-align ang icons sa ibaba para pantay ang bottom line */
+  gap: 60px; /* Sakto lang ang distansya ng tatlo */
+  width: 100%;
+  max-width: 950px;
+  margin-top: 20px;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 180px; /* Pantay na lapad ng bawat container */
+}
+
+.menu-card img {
+  width: 140px; /* Sakto at malinis na sukat ng icon */
+  height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3));
+}
+
+.menu-label {
+  font-family: 'Poppins', serif;
+  font-size: 1.3rem; /* LINALAKAN MULA 1rem TO 1.3rem */
+  color: #ffffff;
+  margin-top: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+/* PAGE 4 STYLES */
+.flower-img {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-2 {
+  animation: float 3.4s ease-in-out infinite 0.3s;
+}
+
+.float-3 {
+  animation: float 2.8s ease-in-out infinite 0.6s;
+}
+
+.menu-card:hover {
+  transform: scale(1.15) translateY(-5px);
+}
+/* Siguraduhin na relative positioning ang mga page */
+.page {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Lower-screen position para sa Continue button */
+.continue-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 100;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.continue-btn:hover {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.08);
+}
+/* --- PAGE 5 LAYOUT STYLES (UPDATED) --- */
+.piece-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* Para sa top positioning ng title */
+}
+
+/* ISINAGAD SA ITAAS AT NAKATGITNA NA TITLE (FIXED) */
+.script-title {
+  position: absolute;
+  top: 25px;                       /* Distansya sa itaas */
+  left: 0;
+  width: 100%;                  /* Sasakupin ang buong lapad ng screen */
+  font-family: 'Great Vibes', 'Dancing Script', cursive;
+  font-size: 4.2rem;               /* Nabalik sa dating malaki */
+  white-space: nowrap;             /* Piliting isang linya */
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-align: center;            /* Gitnang-gitna ang text alignment */
+  z-index: 10;
+  display: flex;                /* Karagdagang pag-pilit na i-center */
+  justify-content: center;      /* sa loob ng 100% width container */
+  align-items: center;          /* horizontally */
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;                       /* Malaking espasyo sa pagitan ng cake at photos */
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 60px;                /* Para hindi matakpan ng title sa itaas */
+}
+
+.cake-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.cake-img {
+  width: 320px;
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+.strips-side {
+  flex: 1.2;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.photo-strip {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* PINALAKING PICTURE SLOTS */
+.photo-slot {
+  width: 130px;                    /* Dati 90px (Pinalaki para malinaw ang larawan) */
+  height: 130px;                   /* Dati 90px */
+  background-color: #eee;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* --- OVERLAPPING PAGES FIX --- */
+.page {
+  display: none !important;
+}
+
+.page.active {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+#page-3 .main-title {
+  position: absolute !important;
+  top: 30px !important;               /* Isinagad sa taas */
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  text-align: center !important;      /* Gitnang-gitna na ang text */
+  margin: 0 auto !important;
+}
+
+/* Halatang-halata at sobrang pinalaking icons */
+.menu-grid img, 
+.menu-item img,
+.gift-icon {
+  width: 150px !important;            /* Pinalaki nang husto ang icons (dati ~60-80px) */
+  height: 150px !important;
+  object-fit: contain !important;
+}
+/* --- MAS PINALAKING CURSIVE FONT STYLE PARA SA PAGE 1 --- */
+#page-1 .main-title {
+  font-family: 'Alex Brush', 'Sacramento', cursive !important;
+  font-size: 6.5rem !important;        /* Mas pinalaking sukat */
+  font-weight: normal !important;
+  color: #ffffff !important;
+  letter-spacing: 1px !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4) !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 auto 10px auto !important;
+}
+/* --- UNIVERSAL FONT FIX (PARA HINDI NA BUMABALIK SA DATI) --- */
+h1, h2, h3, 
+.main-title, 
+.title, 
+.photo-title, 
+.photo-section-title,
+#page-1 .main-title,
+#page-2 .main-title,
+#page-3 .main-title,
+#page-4 .main-title,
+#page-5 .main-title,
+#page-5 h1,
+#page-5 h2 {
+  font-family: 'Alex Brush', 'Sacramento', cursive !important;
+  font-weight: normal !important;
+  letter-spacing: 1px !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+/* --- PAGE 6 LETTER TEXT STYLING (WHITE & LARGER FONT) --- */
+#page-6 .letter-content,
+#page-6 .letter-body,
+#page-6 p {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;            /* Mas malaki kumpara sa dati */
+  font-weight: 500 !important;              /* Mas malinaw at bahagyang makapal */
+  line-height: 1.6 !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7) !important; /* Para litaw na litaw ang puti */
+}
+
+#page-6 .signature,
+#page-6 .signature strong {
+  color: #ffffff !important;
+  font-size: 1.35rem !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8) !important;
+}
+/* --- OVERRIDE MENU ICON SIZES (PAGE 3) --- */
+#page-3 img,
+.option img,
+.menu-item img,
+.icon img,
+.card img {
+  width: 250px !important;
+  height: 250px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+/* Siguraduhing kasya ang mas malaking icon sa lalagyan nito */
+#page-3 .option,
+#page-3 .card,
+#page-3 .menu-item {
+  width: auto !important;
+  min-width: 150px !important;
+}
+/* --- PAGE 5 PICTURES ONLY: SIZE & DISTANCE FIX --- */
+#page-5 .photo-card,
+#page-5 .photo-frame,
+#page-5 .photo-column,
+#page-5 .column {
+  margin: 0 20px !important; /* Dagdag na distance sa pagitan ng dalawang pahabang frame */
+}
+
+#page-5 .photo-card img,
+#page-5 .photo-frame img,
+#page-5 .photo-grid img,
+#page-5 .gallery img,
+#page-5 img:not([src*="cake"]) { 
+  width: 140px !important;   /* Pinalaking lapad ng mga litrato */
+  height: 150px !important;  /* Pinalaking taas ng mga litrato */
+  object-fit: cover !important;
+}
+/* --- EXTRA LARGE FLOWER BOUQUET (PAGE 4) --- */
+#page-4 img,
+#page-4 .flower-img,
+#page-4 .bouquet-img,
+#page-4 .card img {
+  width: 480px !important;            /* Pinalaki nang husto ang lapad */
+  max-width: 95vw !important;          /* Siguradong kasya pa rin sa screen */
+  height: auto !important;             /* Maintain ang hugis at aspect ratio */
+  object-fit: contain !important;
+  display: block !important;
+  margin: 10px auto !important;        /* Nakagitna sa page */
+}
