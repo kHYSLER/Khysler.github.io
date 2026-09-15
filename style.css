@@ -556,13 +556,23 @@ h1, h2, h3,
         height: auto;
     }
 }
-/* FORCE FIT ALL ELEMENTS */
-*, *::before, *::after {
-    box-sizing: border-box !important;
-    max-width: 100vw !important;
-}
+/* TARGET MOBILE SCREENS ONLY */
+@media screen and (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
 
-img, video, div, iframe {
-    max-width: 100% !important;
-    height: auto;
+    .page, .landing-container, .container {
+        width: 90% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
