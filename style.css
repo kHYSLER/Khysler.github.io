@@ -557,30 +557,22 @@ h1, h2, h3,
     }
 }
 @media screen and (max-width: 768px) {
+    /* Force shrink all headings on mobile */
+    h1, h2, h3, .title, .landing-title, [class*="title"] {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix container width and scaling */
     body {
         background-size: cover !important;
         background-position: center !important;
-        background-attachment: fixed;
     }
-
-    /* Paliitin ang malaking cursive title para mag-fit sa screen */
-    h1, .title, .happy-title { 
-        font-size: 2.2rem !important; /* Nililiit nito ang "Happy..." */
-        word-wrap: break-word;
-        padding: 0 10px;
-    }
-
-    p {
-        font-size: 1rem !important;
-        padding: 0 15px;
-    }
-
-    /* Container adjustment */
-    .landing-container, .page {
-        width: 95% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
+    
+    .page, div {
+        max-width: 100vw !important;
         box-sizing: border-box !important;
-        text-align: center !important;
     }
 }
