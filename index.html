@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Baby!</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bg-music" loop>
+    <source src="background-music.mp3" type="audio/mpeg">
+  </audio>
+
+ <!-- PAGE 1: Landing Page (Eksaktong gaya sa picture) -->
+  <section id="page-1" class="page active">
+    <div class="landing-container">
+      <h1 class="main-title">Happy Birthday, Baby!</h1>
+      <p class="subtitle-text">Cheers to the new chapter of your life!</p>
+      <button onclick="nextPage(2)" class="btn-continue">Continue</button>
+    </div>
+  </section>
+    </div>
+  <!-- PAGE 2: Gift Box Page -->
+<section id="page-2" class="page">
+  <div class="landing-container">
+    <h1 class="main-title">Happy Birthday, Baby!</h1>
+    <div class="gift-box" onclick="nextPage(3)">
+      <img src="icon/gift-box.png" alt="Gift Box">
+    </div>
+  </div>
+</section>
+    </div>
+  </section>
+
+  <!-- PAGE 3: Selection Menu Page -->
+<section id="page-3" class="page">
+  <div class="landing-container">
+    <h1 class="main-title">Happy Birthday, Baby!</h1>
+    <p class="subtitle-text" style="margin-bottom: 40px;">Choose one to get started!</p>
+
+    <div class="menu-grid">
+      <!-- Option 1: Flowers -->
+           <div class="menu-card float-1" onclick="nextPage(4)">
+        <img src="icon/flower-icon.png" alt="Flowers for you">
+        <p class="menu-label">Flowers for you</p>
+      </div>
+
+      <!-- Option 2: Cake -->
+      <div class="menu-card float-2" onclick="nextPage(5)">
+        <img src="icon/cake-icon.png" alt="A Piece of Us">
+        <p class="menu-label">A Piece of You</p>
+      </div>
+
+      <!-- Option 3: Letter -->
+      <div class="menu-card float-3" onclick="nextPage(6)">
+        <img src="icon/letter-icon.png" alt="Letter Just for you">
+        <p class="menu-label">Letter Just for you</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- PAGE 4: Flower Page -->
+<section id="page-4" class="page">
+  <div class="landing-container">
+    <h1 class="main-title">Flowers For You!</h1>
+    
+    <div class="flower-container">
+      <img src="icon/flower-bouquet.png" alt="Flowers" class="flower-img">
+    </div>
+  </div>
+
+  <!-- EKSAKTONG LAYOUT AT POSITIONING NG CONTINUE -->
+  <p class="continue-btn" onclick="nextPage(3)">Continue</p>
+</section>
+
+  <!-- PAGE 5: A Piece of Us Page -->
+<section id="page-5" class="page">
+  <div class="piece-container">
+    <h1 class="script-title">A Piece of You in This Lifetime</h1>
+
+    <div class="content-wrapper">
+      <!-- Kaliwang Bahagi: Cake -->
+      <div class="cake-side">
+        <img src="icon/cake-icon.png" alt="Birthday Cake" class="cake-img">
+      </div>
+
+      <!-- Kanang Bahagi: 2 Photo Strips -->
+      <div class="strips-side">
+        <!-- Strip 1 -->
+        <div class="photo-strip">
+          <div class="photo-slot"><img src="images/photo1.jpeg" alt="Memory 1"></div>
+          <div class="photo-slot"><img src="images/photo2.jpeg" alt="Memory 2"></div>
+          <div class="photo-slot"><img src="images/photo3.jpeg" alt="Memory 3"></div>
+        </div>
+
+        <!-- Strip 2 -->
+        <div class="photo-strip">
+          <div class="photo-slot"><img src="images/photo4.jpeg" alt="Memory 4"></div>
+          <div class="photo-slot"><img src="images/photo5.jpeg" alt="Memory 5"></div>
+          <div class="photo-slot"><img src="images/photo6.jpeg" alt="Memory 6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAPIPINDOT NA CONTINUE BUTTON SA BABA (Babalik sa Page 3 Menu) -->
+  <p class="continue-btn" onclick="nextPage(3)">Continue</p>
+</section>
+
+  <section id="page-6" class="page">
+  <!-- SPOTIFY PLAYER EMBED -->
+  <div class="spotify-container">
+    <iframe 
+      style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/4PTG336M9iJ39L3385R42f?utm_source=generator" 
+      width="100%" 
+      height="152" 
+      frameBorder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- LETTER CONTENT -->
+  <div class="letter-content">
+    <p>
+      Happy Birthday, BABY! Sana maging masaya at special ang araw mo. Gusto ko lang sabihin kung gaano ako kasaya na dumating ka sa buhay ko. Thank you sa lahat ng love, care, at understanding na binibigay mo sa akin.
+    </p>
+    <p>
+      Sana matupad lahat ng wishes at pangarap mo, at sana lagi kang maging healthy at happy.
+    </p>
+    <p>
+      Nandito lang ako palagi para suportahan ka at samahan ka sa mga bagay na gusto mong maabot. Enjoy your day, birthday baby! Mahal na mahal kita!
+    </p>
+    <p class="signature"><strong>Stay Pretty, Baby. HBD!</strong></p>
+  </div>
+
+  <button onclick="nextPage(3)" class="btn">Back to Menu</button>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
